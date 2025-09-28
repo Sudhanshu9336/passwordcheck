@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Check Password</h1>
+        <div class="input-group">
+            <label for="password">Enter Password:</label>
+            <input type="password" id="password" placeholder="Type your password here">
+            <div class ="strength">
+                <p  id="strength-text">Strength: </p>
+                <div id="strength-bar" class="strength-bar"></div>
+            </div>
+            <ul id="password-tips" class="password-tips">
+                <li id="length-tip" class="invalid">❌At least 8 characters</li>
+                <li id="uppercase-tip" class="invalid">❌At least one uppercase letter</li>
+                <li id="lowercase-tip" class="invalid">❌At least one lowercase letter</li>
+                <li id="number-tip" class="invalid">❌At least one number</li>
+                <li id="special-tip" class="invalid">❌At least one special character (!@#$%^&*)</li>
+            </ul>
+            <div class="footer">
+                <p>Made by Sudhanshu Gupta</p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
