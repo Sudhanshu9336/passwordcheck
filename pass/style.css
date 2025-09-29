@@ -14,7 +14,7 @@ body {
   background: #f1bfbf;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(241, 16, 16, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   width: 350px;
   text-align: center;
 }
@@ -37,7 +37,8 @@ label {
   text-align: left;
 }
 
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 8px;
@@ -45,8 +46,19 @@ input[type="password"] {
   outline: none;
 }
 
-input[type="password"]:focus {
+input[type="password"]:focus,
+input[type="text"]:focus {
   border-color: #3b82f6;
+}
+
+/* Show Password Section */
+.show-password {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
 }
 
 /* Strength Section */
