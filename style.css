@@ -1,45 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Strength Checker</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="container">
-    <h1>Check Password</h1>
-    <div class="input-group">
-      <label for="password">Enter Password:</label>
-      <input type="password" id="password" placeholder="Type your password here">
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #668ecc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
 
-      <!-- Show/Hide Password Toggle -->
-      <div class="show-password">
-        <input type="checkbox" id="togglePassword">
-        <label for="togglePassword">Show Password</label>
-      </div>
+/* Container */
+.container {
+  background: #f1bfbf;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
 
-      <!-- Strength Indicator -->
-      <div class="strength">
-        <p id="strength-text">Strength: </p>
-        <div id="strength-bar" class="strength-bar"></div>
-      </div>
+/* Heading */
+.container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
 
-      <!-- Password Tips -->
-      <ul id="password-tips" class="password-tips">
-        <li id="length-tip" class="invalid">❌ At least 8 characters</li>
-        <li id="uppercase-tip" class="invalid">❌ At least one uppercase letter</li>
-        <li id="lowercase-tip" class="invalid">❌ At least one lowercase letter</li>
-        <li id="number-tip" class="invalid">❌ At least one number</li>
-        <li id="special-tip" class="invalid">❌ At least one special character (!@#$%^&*)</li>
-      </ul>
-      <!-- Footer --> 
-      <div class="footer">
-        <p>Made by Sudhanshu Gupta</p>
-      </div>
-    </div>
-  </main>
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  <script src="index.js"></script>
-</body>
-</html>
+label {
+  font-weight: bold;
+  text-align: left;
+}
+
+input[type="password"],
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+  border-color: #3b82f6;
+}
+
+/* Show Password Section */
+.show-password {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Strength Section */
+.strength {
+  margin-top: 10px;
+  text-align: left;
+}
+
+#strength-text {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Strength Bar */
+.strength-bar {
+  width: 0%;
+  height: 8px;
+  border-radius: 5px;
+  background: red;
+  transition: width 0.4s ease, background 0.4s ease;
+}
+
+/* Password Tips */
+.password-tips {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.password-tips li {
+  margin-bottom: 5px;
+}
+
+.password-tips li.valid {
+  color: green;
+}
+
+.password-tips li.invalid {
+  color: red;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #555;
+}
